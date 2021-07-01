@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>BOOKSHELF APSS</title>
+</head>
+<body>
+  
+  <div class="container py-4">
+    <header class="pb-3 mb-4 text-center border-bottom">
+      BOOKSHELF APPs
+    </header>
+    
+    <!-- Form input Buku -->
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <form id="inputBook">
+        <div class="mb-3">
+          <label for="inputBookTitle" class="form-label">Masukkan Judul Buku</label>
+          <input type="text" id="inputBookTitle" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+          <label for="inputBookAuthor" class="form-label">Masukkan Pengarang Buku</label>
+          <input type="text" id="inputBookAuthor" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+          <label for="inputBookYear" class="form-label">Masukkan Tahun Buku</label>
+          <input type="date" id="inputBookYear" class="form-control">
+        </div>
+        
+        <div class="mb-3 form-check">
+          <input type="checkbox" id="inputBookIsComplete" class="form-check-input">
+          <label for="inputBookIsComplete">Masukkan selesai dibaca</label>
+        </div>
+        
+        <button type="submit" id="bookSubmit" class="btn btn-primary">Simpan</button>
+      </form>
+    </div>
+    <!-- end input buku -->
+    
+    <!-- form search -->
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <form class="d-flex" id="searchBook">
+        <input class="form-control me-2" type="search" id="searchBookTitle" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" id="searchSubmit" type="submit">Search</button>
+      </form>
+    </div>
+    <!-- end search -->
+    
+    <!-- task -->
+    <div class="row align-items-md-stretch">
+      <!-- task uncompleted -->
+      <div class="col-md-6"">
+        <div class="h-100 p-1 bg-danger rounded-3" id="incompleteBookshelfList">
+          <h4 class="text-center">Buku Belum Selsai dibaca</h4>
+          
+          <!-- <div class="book-item bg-secondary rounded-3 p-1 m-3">
+            <h3>Book Title</h3>
+            <p>Penulis: John Doe</p>
+            <p>Tahun: 2002</p>
+            
+            <button class="btn btn-success">Selesai dibaca</button>
+            <button class="btn btn-danger">Hapus buku</button>
+          </div> -->
+          
+        </div>
+      </div>
+      <!-- end task upcompleted -->
+
+      <!-- task compledted -->
+      <div class="col-md-6">
+        <div class="h-100 p-1 bg-success rounded-3" id="completeBookshelfList">
+          <h4 class="text-center">Buku Selsai dibaca</h4>
+          
+          <!-- <div class="book-item bg-transparent rounded-3 p-1 m-3">
+            <h3>Book Title</h3>
+            <p>Penulis: John Doe</p>
+            <p>Tahun: 2002</p>
+            
+            <button class="btn btn-success">Selesai dibaca</button>
+            <button class="btn btn-danger">Hapus buku</button>
+          </div> -->
+          
+        </div>
+      </div>
+      <!-- end task completed -->
+    </div>
+    <!-- end task -->
+    
+    
+    <footer class="pt-3 mt-4 text-muted border-top">
+      Veri Iswanto &copy; 2021
+    </footer>
+  </div>
+  
+  <script src="js/storage.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
